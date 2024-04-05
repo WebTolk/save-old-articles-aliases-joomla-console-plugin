@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="console" method="upgrade">
+	<name>Console - Save old articles aliases</name>
+	<author>Sergey Tolkachyov</author>
+	<creationDate>Apr 2024</creationDate>
+	<copyright>Copyright © 2024 Sergey Tolkachyov. All rights reserved.</copyright>
+	<license>https://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<authorEmail>info@web-tolk.ru</authorEmail>
+	<authorUrl>https://web-tolk.ru</authorUrl>
+	<version>1.0.0</version>
+	<description>PLG_SAVEOLDARTICLESALIASES_DESC</description>
+	<namespace path="src">Joomla\Plugin\Console\Saveoldarticlesaliases</namespace>
+	<scriptfile>script.php</scriptfile>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/plg_console_saveoldarticlesaliases.ini</language>
+		<language tag="en-GB">en-GB/plg_console_saveoldarticlesaliases.sys.ini</language>
+		<language tag="ru-RU">ru-RU/plg_console_saveoldarticlesaliases.ini</language>
+		<language tag="ru-RU">ru-RU/plg_console_saveoldarticlesaliases.sys.ini</language>
+	</languages>
+	<files>
+		<folder>services</folder>
+		<folder plugin="saveoldarticlesaliases">src</folder>
+	</files>
+	<config>
+        <fields name="params">
+            <fieldset name="basic">
+				<field addfieldprefix="Joomla\Plugin\Console\Saveoldarticlesaliases\Fields"
+                       type="plugininfo"
+                       name="plugininfo"/>
+				<field type="note" description="PLG_SAVEOLDARTICLESALIASES_HOWTO" class="alert alert-info"/>
+			</fieldset>
+        </fields>
+    </config>
+	<updateservers>
+      <server type="extension" priority="1" name="Console - Save old articles aliases updates">https://web-tolk.ru/component/swjprojects/jupdate?element=saveoldarticlesaliases</server>
+	</updateservers>
+	<changelogurl>https://web-tolk.ru/jchangelog?element=saveoldarticlesaliases</changelogurl>
+</extension>
